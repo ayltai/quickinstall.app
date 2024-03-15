@@ -1,0 +1,26 @@
+get:
+  tags:
+    - install
+    - spell
+  operationId: getSpellScriptApi
+  summary: Get an installation script for a spell
+  description: Get an installation script by spell ID
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The ID of the spell
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string
+            description: The installation script
+    '400':
+      description: Bad Request
+    '404':
+      description: Not Found

@@ -1,0 +1,34 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './DarkModeSwitch.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use a dark mode switch
+
+Use a dark mode switch to let users quickly switch between the light and dark theme mode.
+
+When using a dark mode switch,
+* Provide a visible label or icon that clearly indicates the purpose of the component and the current theme mode
+
+# Guidelines
+
+* Be clear about what will happen if the switch is clicked
+* Start your labels, if any, with a capital letter
+* Don't use more than two words per label
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Variants of buttons'
+    includePrimary={false} />

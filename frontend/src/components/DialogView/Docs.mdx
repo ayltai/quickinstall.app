@@ -1,0 +1,36 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './DialogView.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use dialogues
+
+Dialogues are used to focus the user's attention on a single task or an important piece of information. They can be used to confirm a user decision, notify the user of important information, or when an immediate response is required from the user.
+
+When using dialogues,
+* Use them sparingly as they are disruptive to the user's experience
+* Only give a single piece of information or require a single task to be completed. If you need the dialogue to do more than one thing, consider using a page instead
+
+# Guidelines
+
+* Include descriptive headings that include the main message of the dialogue
+* Keep content concise
+* When using buttons with dialogues, the button labels should make it easy to understand what will happen if the button is clicked
+* It should be clear which button is confirmation and which is cancellation through button labels
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

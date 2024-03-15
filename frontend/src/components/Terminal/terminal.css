@@ -1,0 +1,4 @@
+.type::after {
+    content : '█';
+    color   : #999999;
+}

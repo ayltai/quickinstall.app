@@ -1,0 +1,2677 @@
+{
+    "sys"   : {
+        "type" : "Array"
+    },
+    "total" : 50,
+    "skip"  : 0,
+    "limit" : 100,
+    "items" : [
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2iGWYgBGxWnT8b6sFrjk79",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:14:18.847Z",
+                "updatedAt"   : "2024-02-23T11:14:18.847Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "performance.memory_compression",
+                "name"        : "Disable memory compression and swap",
+                "description" : "You may want to disable memory compression and swap to improve performance and prolong the SSD drive lifetime. However, this may cause the system to crash if you run out of memory.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.lifewire.com/understanding-compressed-memory-os-x-2260327",
+                "author"      : "QuickInstall.app",
+                "privileged"  : true,
+                "sipInvolved" : true,
+                "parameters"  : [
+                    "Disable memory compression and swap"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "6fIxBLnQe2F1aWEFCyr0Mc",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:13:14.343Z",
+                "updatedAt"   : "2024-02-23T11:13:14.343Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.boot_sound",
+                "name"        : "Disable boot sound",
+                "description" : "By default, macOS plays a sound when you boot up your computer.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.howtogeek.com/260693/how-to-disable-the-boot-sound-or-startup-chime-on-a-mac/",
+                "author"      : "QuickInstall.app",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable boot sound"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7d6H0L7JdjE3KdaFJzWaCN",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:12:26.883Z",
+                "updatedAt"   : "2024-02-23T11:12:26.883Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.computer_name",
+                "name"        : "Change computer name",
+                "description" : "Specify the computer name",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.businessinsider.com/guides/tech/how-to-change-mac-name?r=US&IR=T",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Computer name"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "QuickInstall.App"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5JVmW9mXRFlezkFymaU75D",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:10:18.790Z",
+                "updatedAt"   : "2024-02-23T11:10:18.790Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.default_shell",
+                "name"        : "Change default shell",
+                "description" : "Specify the default shell. Supported values are \"bash\", \"csh\", \"dash\", \"ksh\", \"sh\", \"tcsh\", and \"zsh\".",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Default shell"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "bash"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "0rWyd12bGkfzbjk1lcti0",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:09:39.061Z",
+                "updatedAt"   : "2024-02-23T11:09:39.061Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.software_update_frequency",
+                "name"        : "Change software update frequency",
+                "description" : "macOS automatically checks for software updates but you cannot change how often it checks in System Preferences.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.idownloadblog.com/2016/02/23/change-how-often-mac-checks-software-updates/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Software update frequency in days"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "1"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1Ru76rq0RIlROvfum93LBo",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:08:50.593Z",
+                "updatedAt"   : "2024-02-23T11:08:50.593Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.crash_reports",
+                "name"        : "Disable crash reports",
+                "description" : "The crash reporter takes up a lot of resources and if you are a developer, you may quickly get annoyed by the constant popups.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://jonathansblog.co.uk/disable-reportcrash-osx-lion",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable crash reports"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7HaCvWQMXBb6JF4VNj2Qyh",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:08:07.401Z",
+                "updatedAt"   : "2024-02-23T11:08:07.401Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.keep_windows",
+                "name"        : "Always keep windows",
+                "description" : "macOS can remember all the tabs and windows you had opened for the next time you launch it again.",
+                "category"    : "Preferences",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Keep windows"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2QN9vN6ickpL5glJ5RFHsF",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:07:14.489Z",
+                "updatedAt"   : "2024-02-23T11:07:14.489Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.computer_sleep",
+                "name"        : "Put computer to sleep due to inactivity",
+                "description" : "You can put the computer to sleep for battery saving or privacy reasons. Specify 0 to disable it.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://mackeeper.com/blog/how-to-change-sleep-settings/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Put computer to sleep delay in minutes"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "6UunzhFdJFbVy5OcCjBuJu",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T11:06:32.190Z",
+                "updatedAt"   : "2024-02-23T11:06:32.190Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.display_sleep",
+                "name"        : "Put display to sleep due to inactivity",
+                "description" : "You can put the display to sleep for battery saving or privacy reasons.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.idownloadblog.com/2023/03/23/how-to-change-sleep-time-on-mac/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Put display to sleep delay in minutes"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "10"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "26kkzuvCzTPqEUlEUZMbDK",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:58:42.762Z",
+                "updatedAt"   : "2024-02-23T10:58:42.762Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.mouse_shake",
+                "name"        : "Disable \"shake mouse pointer to locate\" feature",
+                "description" : "By default, the mouse cursor in macOS gets really big when you shake the mouse or when you move it too quickly.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.danrodney.com/blog/disable-macos-big-cursor-with-shake/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable shake mouse pointer to locate"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2vnwhN3ZMmnQEFTpWpuOPc",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:57:34.608Z",
+                "updatedAt"   : "2024-02-23T10:57:34.608Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.tunes_media_keys",
+                "name"        : "Disable iTunes media keys",
+                "description" : "If you have iTunes installed, when you press Play on the keyboard, or connect a headset or Bluetooth speaker, iTunes will automatically run.",
+                "category"    : "Preferences",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable iTunes media keys"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5ibItsv9e4BPk0uw7hrLaM",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:56:48.671Z",
+                "updatedAt"   : "2024-02-23T10:56:48.671Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "preference.swipe_navigation",
+                "name"        : "Disable swipe navigation in Google Chrome",
+                "description" : "By default, even if you have disabled the system-wide \"Swipe between pages\" feature, Google Chrome still allows you to swipe between pages.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://medium.com/@victoraremu/disable-two-finger-swipe-left-right-page-navigation-gesture-of-chromium-based-browsers-on-macos-5f2ed57b65a5",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable swipe navigation in Google Chrome"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2nuWgukYYkumVRHNh1pj3C",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:55:58.890Z",
+                "updatedAt"   : "2024-02-23T10:55:58.890Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.dark_mode",
+                "name"        : "Set theme to dark mode",
+                "description" : "Specify \"Dark\" to set the theme to dark mode and \"Light\" to set it to light mode.",
+                "category"    : "Appearance",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Default theme mode"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "Dark"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "3bFwaAFG8vT0T0PU05aqI5",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:55:18.289Z",
+                "updatedAt"   : "2024-02-23T10:55:18.289Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.dock_animation",
+                "name"        : "Change Dock animation effect",
+                "description" : "macOS animates the Dock when you open or close an application. Supported effects are \"genie\", \"scale\" and \"suck\".",
+                "category"    : "Appearance",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Change Dock animation effect"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "genie"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7yP5jWPdRWLpJp4HmRghYh",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:52:47.932Z",
+                "updatedAt"   : "2024-02-23T10:52:47.932Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.recent_apps",
+                "name"        : "Disable showing recent applications in Dock",
+                "description" : "By default, macOS shows three most recent applications in the Dock.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://www.macobserver.com/tips/how-to/remove-icons-recently-used-apps-mac-dock/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable showing recent applications in Dock"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2MHERqKRnq5jfZ4hdHPuHJ",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-23T10:51:57.661Z",
+                "updatedAt"   : "2024-02-23T10:51:57.661Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.dock_spring_loading",
+                "name"        : "Enable Dock icons spring loading",
+                "description" : "Dock icons can operate with the same spring-loaded features as folders. By default, this feature is disabled.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://macos-defaults.com/misc/enable-spring-load-actions-on-all-items.html",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Enable Dock icons spring loading"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2QEURGG9TP2P6gU3EIdEHO",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:31:41.325Z",
+                "updatedAt"   : "2024-02-22T18:31:41.325Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.lock_dock_icon_size",
+                "name"        : "Lock Dock icon size",
+                "description" : "You can lock the size of the Dock icons to prevent them from being resized.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://www.idownloadblog.com/2020/01/15/how-to-lock-the-dock-on-mac/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Lock Dock icon size"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "9Nb8YUyGtFYJYgyOOSfl1",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:31:03.712Z",
+                "updatedAt"   : "2024-02-22T18:31:03.712Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.dock_icon_size",
+                "name"        : "Set Dock icon size",
+                "description" : "You can change the size of the Dock icons to an exact number in pixels.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://www.businessinsider.com/guides/tech/how-to-change-dock-size-on-mac?r=US&IR=T",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Dock icon size in pixels"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "32"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "GJHrdcO1VGoWBCVrsji83",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:30:27.578Z",
+                "updatedAt"   : "2024-02-22T18:30:27.578Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "appearance.dock_position",
+                "name"        : "Change Dock position",
+                "description" : "You can change the position of the Dock to the left, bottom, or right side of the screen. Supported positions are \"left\", \"right\" and \"bottom\".",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://appleinsider.com/inside/macos/tips/how-to-move-or-hide-the-dock-in-macos",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Dock position"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "bottom"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2J22Pbd0cwioQRNrSf9BBv",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:29:13.221Z",
+                "updatedAt"   : "2024-02-22T18:29:13.221Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "file.auto_empty_trash",
+                "name"        : "Empty trash automatically after 30 days",
+                "description" : "v",
+                "category"    : "File management",
+                "infoUrl"     : "https://www.macrumors.com/how-to/automatically-empty-trash-mac/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Empty trash automatically after 30 days"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1BTVISJGDWAy0JCmO3ivBX",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:28:30.317Z",
+                "updatedAt"   : "2024-02-22T18:28:30.317Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "file.empty_trash_warning",
+                "name"        : "Disable warnings about emptying trash",
+                "description" : "By default, macOS warns you when you empty the trash.",
+                "category"    : "File management",
+                "infoUrl"     : "https://www.howtogeek.com/714198/how-to-disable-the-empty-trash-warning-on-a-mac/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable warnings about emptying trash"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "dE7SZeHWnwyg5XbsqGglH",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:27:38.180Z",
+                "updatedAt"   : "2024-02-22T18:27:38.180Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "file.ds_store",
+                "name"        : "Disable .DS_Store file creation on network volumes",
+                "description" : "By default, macOS creates .DS_Store files on network volumes to store custom attributes of the folder.",
+                "category"    : "File management",
+                "infoUrl"     : "https://www.techrepublic.com/article/how-to-disable-the-creation-of-dsstore-files-for-mac-users-folders/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable .DS_Store file creation"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "6swwo2l7YGh2qRSAbYFscZ",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:26:57.803Z",
+                "updatedAt"   : "2024-02-22T18:26:57.803Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.spring_loading_delay",
+                "name"        : "Change spring-loading delay in Finder",
+                "description" : "You can customise the spring-loaded folder delay to suit your preference. The value is in seconds.",
+                "category"    : "Finder",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Spring loading delay in seconds"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "1"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "NO3nniWfdDfCzcLUuMWUm",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:26:15.060Z",
+                "updatedAt"   : "2024-02-22T18:26:15.060Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.spring_loading",
+                "name"        : "Enable spring loading effector for directories in Finder",
+                "description" : "By default, a spring-loaded folder pops open when you drag something onto its icon while holding down the mouse button.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://www.lifewire.com/how-to-configure-finders-spring-loaded-folders-2260901",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable spring loading effect"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1GaD89wUpAUj3on1ZFEYKJ",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:25:31.506Z",
+                "updatedAt"   : "2024-02-22T18:25:31.506Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.view_style",
+                "name"        : "Set default view style in Finder",
+                "description" : "Finder can display files in a variety of ways and it may open up with a different view style each time. Specify \"Nlsv\" for list view, \"icnv\" for icon view, \"clmv\" for column view, \"Flwv\" for cover flow view, and \"glyv\" for gallery view.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://osxdaily.com/2012/07/04/change-finder-window-view-style-command-line/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "View style"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "Nlsv"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7fkbO2rosdvDIiONMB2YlL",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:23:58.985Z",
+                "updatedAt"   : "2024-02-22T18:23:58.985Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.file_extension_warnings",
+                "name"        : "Disable warnings when changing file extension in Finder",
+                "description" : "By default, macOS warns you when you change a file extension.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://www.idownloadblog.com/2021/04/29/how-to-turn-off-warnings-for-file-extension-changes-on-mac/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable file extension warnings"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "46rPua8Szr6SyuFaATiZlm",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:23:11.758Z",
+                "updatedAt"   : "2024-02-22T18:23:11.758Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.keep_folders_on_top",
+                "name"        : "Keep folders on top when sorting by name in Finder",
+                "description" : "By default, Finder sorts a directory's contents by name, with both files and folders arranged alongside one another based upon an alphabetical sorting of their names.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://www.idownloadblog.com/2019/02/12/finder-view-options-sort-order-mac-folder/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Keep folders on top when sorting by name in Finder"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "6Li4KRw4CeEW7k0hYO3UpS",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:22:24.668Z",
+                "updatedAt"   : "2024-02-22T18:22:24.668Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.show_quit_option",
+                "name"        : "Show Quit option in Finder",
+                "description" : "By default, macOS hides the Quit option in Finder.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://macos-defaults.com/finder/quitmenuitem.html",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Show Quit option in Finder"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "3UgDzTDhnwY0skQ1UuM3qf",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:21:43.662Z",
+                "updatedAt"   : "2024-02-22T18:21:43.662Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.show_status_bar",
+                "name"        : "Show status bar in Finder",
+                "description" : "By default, macOS hides the status bar in Finder.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://www.mactrast.com/2017/03/show-status-bar-finder-macos-sierra/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Show status bar"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5jClZkrOkyvXMTVWDS9oih",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:21:02.545Z",
+                "updatedAt"   : "2024-02-22T18:21:02.545Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.sidebar_icon_size",
+                "name"        : "Change sidebar icon size in Finder",
+                "description" : "Change the size of the icons in the sidebar of Finder. Specify \"1\" for small icons, \"2\" for medium icons, and \"3\" for large icons.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://macos-defaults.com/finder/nstableviewdefaultsizemode.html",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Sidebar icon size"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "2"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "101qoGBcoVgfTXdmXzSCwd",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:20:19.384Z",
+                "updatedAt"   : "2024-02-22T18:20:19.384Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.show_hidden_files",
+                "name"        : "Show hidden files in Finder",
+                "description" : "By default, macOS hides hidden files in Finder.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://www.pcmag.com/how-to/how-to-access-your-macs-hidden-files",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Show hidden files"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "6BQLoxI0WSRj2e5h61TqX6",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:19:30.277Z",
+                "updatedAt"   : "2024-02-22T18:19:30.277Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "finder.file_extensions",
+                "name"        : "Show file extensions in Finder",
+                "description" : "By default, macOS hides file extensions in Finder.",
+                "category"    : "Finder",
+                "infoUrl"     : "https://macos-defaults.com/finder/appleshowallextensions.html",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Finder",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Show file extensions"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1WwDR4XEGyYr2JLbJHwizb",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:18:14.682Z",
+                "updatedAt"   : "2024-02-22T18:18:14.682Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.subpixel_font_rendering",
+                "name"        : "Change subpixel font rendering on external monitors",
+                "description" : "If you are running macOS on a Mac without a retina display, or with an external monitor that does not have an ultra-high resolution screen, you may have noticed that some fonts and text can appear as blurry and difficult to read. This is because macOS is rendering the text using subpixel font rendering. Specify \"1\" if you want less text smoothing, \"2\" if you want medium-level text smoothing, and \"3\" if you want more text smoothing.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://www.howtogeek.com/358596/how-to-fix-blurry-fonts-on-macos-mojave-with-subpixel-antialiasing/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Subpixel rendering mode"
+                ],
+                "types"       : [
+                    "number"
+                ],
+                "values"      : [
+                    "2"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7yGV3ZkN7unpXb214SOAY5",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:16:20.181Z",
+                "updatedAt"   : "2024-02-22T18:16:20.181Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.screenshot_date",
+                "name"        : "Include a date in screenshot filenames",
+                "description" : "By default, macOS save screenshots with the filename \"Screen Shot YYYY-MM-DD at HH-MM-SS AM/PM.png\".",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://macos-defaults.com/screenshots/include-date.html",
+                "author"      : "QuickInstall.App",
+                "impact"      : "SystemUIServer",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Include date in screenshot filename"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7MvDtDyx200VWd9nXlO0fk",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:15:24.220Z",
+                "updatedAt"   : "2024-02-22T18:15:24.220Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.screenshot_shadow",
+                "name"        : "Disable screenshot shadow",
+                "description" : "By default, macOS adds a shadow to the screenshot.",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://www.idownloadblog.com/2014/08/03/how-to-remove-the-shadow-window-screenshots-on-mac-os-x/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "SystemUIServer",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable screenshot shadow"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2bFYRE1NgxDKcP5r0ucRdJ",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:14:39.874Z",
+                "updatedAt"   : "2024-02-22T18:14:39.874Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.screenshots_format",
+                "name"        : "Change screenshots format",
+                "description" : "Change the format of screenshots. Default is PNG. Support formats are \"jpg\", \"tiff\", \"gif\", \"pdf\", and \"png\".",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://www.laptopmag.com/articles/change-default-screenshot-file-format-macos",
+                "author"      : "QuickInstall.App",
+                "impact"      : "SystemUIServer",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Screenshot format"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "png"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "2MQgnflg6qqEudDJZfyvGD",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:13:19.305Z",
+                "updatedAt"   : "2024-02-22T18:13:19.305Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.display_thumbnail_after_screenshot",
+                "name"        : "Display thumbnail after screenshot",
+                "description" : "Display a thumbnail after taking a screenshot.",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://www.makeuseof.com/how-to-disable-screenshot-previews-on-mac/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Enable thumbnail after screenshot"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "58xjsrW8AgPrpa9hwvZBN1",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:11:54.683Z",
+                "updatedAt"   : "2024-02-22T18:11:54.683Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.default_screenshot_location",
+                "name"        : "Change default screenshot location",
+                "description" : "Change the default location where screenshots are saved. Default is ~/Desktop.",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://www.macworld.com/article/673251/how-to-change-where-screenshots-are-saved-on-a-mac.html",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Screenshot file location"
+                ],
+                "types"       : [
+                    "string"
+                ],
+                "values"      : [
+                    "~/Desktop"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1REM6bTRUObPD4e29uphQI",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:06:00.202Z",
+                "updatedAt"   : "2024-02-22T18:06:00.202Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "media.auto_open_photos",
+                "name"        : "Disable auto-open Photos",
+                "description" : "macOS automatically opens Photos every time you insert a memory card or connect a device.",
+                "category"    : "Multimedia",
+                "infoUrl"     : "https://www.idownloadblog.com/2015/12/28/how-to-stop-photos-mac-auto-launch/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable auto-open Photos"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5jEcbosuDMDXd1vAK234Zx",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:05:13.168Z",
+                "updatedAt"   : "2024-02-22T18:05:13.168Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "os.hibernation",
+                "name"        : "Disable hibernation",
+                "description" : "macOS copies the current RAM contents to a file on the disk drive and then shuts down. This is useful if you want to resume your work after a power outage. However, it can cause problems to some applications and it shortens the lifespan of your SSD drive.",
+                "category"    : "Operating System",
+                "infoUrl"     : "https://setapp.com/how-to/how-to-stop-mac-from-sleeping",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable hibernation"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "4chhMqdwCR0p9durDwJfzU",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:04:17.328Z",
+                "updatedAt"   : "2024-02-22T18:04:17.328Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "os.sudden_motion_sensor",
+                "name"        : "Disable the Sudden Motion Sensor",
+                "description" : "The Sudden Motion Sensor is a hardware feature that detects sudden movement and can be used to protect the hard drive. However, it can also cause problems when you are using a laptop on an uneven surface and it is unnecessary if your Mac ships with an SSD drive.",
+                "category"    : "Operating System",
+                "infoUrl"     : "https://osxdaily.com/2010/12/16/disable-sudden-motion-sensor-mac/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable the Sudden Motion Sensor"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5gc9U6D9VSreJCw1i3GPYg",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:03:27.325Z",
+                "updatedAt"   : "2024-02-22T18:03:27.325Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "keyboard.spelling_autocorrect",
+                "name"        : "Disable spelling autocorrect",
+                "description" : "By default, macOS automatically corrects your spelling mistakes.",
+                "category"    : "Keyboard",
+                "infoUrl"     : "https://www.businessinsider.com/guides/tech/how-to-turn-off-autocorrect-on-mac?r=US&IR=T",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable spelling autocorrect"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1tTxsURPyAXqUNL01MVGPI",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:02:27.518Z",
+                "updatedAt"   : "2024-02-22T18:02:27.518Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "keyboard.auto_capitalisation",
+                "name"        : "Disable auto capitalisation",
+                "description" : "macOS automatically capitalises the first letter of a sentence. But for developers, it is annoying to have to manually change it back.",
+                "category"    : "Keyboard",
+                "infoUrl"     : "https://osxdaily.com/2021/02/19/how-turn-off-auto-capitalize-words-mac/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable auto capitalisation"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "SKnUfEPkq1RhpFPZOrV9c",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:01:12.666Z",
+                "updatedAt"   : "2024-02-22T18:01:12.666Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "keyboard.smart_dashes",
+                "name"        : "Disable smart dashes",
+                "description" : "macOS automatically converts straight dashes to smart dashes. But for developers, it is annoying to have to manually change them back.",
+                "category"    : "Keyboard",
+                "infoUrl"     : "https://apple.stackexchange.com/questions/136402/how-to-disable-smart-quotes",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable smart dashes"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "19KSp5l2yZQsDtSdO79Bs5",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T18:00:12.841Z",
+                "updatedAt"   : "2024-02-22T18:00:12.841Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "keyboard.smart_quotes",
+                "name"        : "Disable smart quotes",
+                "description" : "macOS automatically converts straight quotes to smart quotes. But for developers, it is annoying to have to manually change them back.",
+                "category"    : "Keyboard",
+                "infoUrl"     : "https://apple.stackexchange.com/questions/136402/how-to-disable-smart-quotes",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable smart quotes"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "1dw6VezV1tEVDYvaHgt9PE",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T17:59:29.259Z",
+                "updatedAt"   : "2024-02-22T17:59:29.259Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "bloatware.game_center",
+                "name"        : "Disable Game Center daemon",
+                "description" : "By default, Game Center daemon continues to run even when you have disabled Game Center.",
+                "category"    : "Preferences",
+                "infoUrl"     : "https://www.furlo.sk/blog/odborny/2017-12-24-disable_game_center_daemon_on_os_x",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable Game Center daemon"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "56tkM1M9TPGWKxM7Ev3DM0",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T17:58:32.269Z",
+                "updatedAt"   : "2024-02-22T17:58:32.269Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "security.quarantine",
+                "name"        : "Turn off quarantine of unknown applications",
+                "description" : "When you download an application from the Internet, macOS will mark it as quarantined. This is to prevent you from running malicious applications. However, it gets annoying when it won't let you open an application when you is safe.",
+                "category"    : "Security",
+                "infoUrl"     : "https://www.idownloadblog.com/2017/04/20/fix-application-from-internet-gatekeeper/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable quarantine"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "5JFgh5ZUdrA4RTyAWi0Q1D",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T17:57:26.287Z",
+                "updatedAt"   : "2024-02-22T17:57:26.287Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "security.gatekeeper",
+                "name"        : "Disable Gatekeeper",
+                "description" : "Gatekeeper requires applications to be signed by an Apple developer to run. However, code signing is a paid process and not all developers sign their applications. It gets annoying when it won't let you open an application that you know is safe.",
+                "category"    : "Security",
+                "infoUrl"     : "https://www.makeuseof.com/how-to-disable-gatekeeper-mac/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : true,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable Gatekeeper"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "4NutFTLM7s9Ma9E9CxM34z",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T15:25:31.620Z",
+                "updatedAt"   : "2024-02-22T15:25:31.620Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "security.disk_image_verification",
+                "name"        : "Disable disk image verification",
+                "description" : "You can skip disk image file checksum verification to speed up the mounting of disk images through this is not recommended by Apple or security experts.",
+                "category"    : "Security",
+                "infoUrl"     : "https://pamirwebhost.com/mac-os-x-how-to-disable-the-disk-image-verification/",
+                "author"      : "QuickInstall.App",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Disable disk image verification"
+                ],
+                "types"       : [
+                    "boolean"
+                ],
+                "values"      : [
+                    "true"
+                ]
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "31YJCIx6XBcEPSaIY2KFDr",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T15:24:09.859Z",
+                "updatedAt"   : "2024-02-22T15:24:09.859Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "master",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "tweak"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "launchpad.grid",
+                "name"        : "Change Launchpad grid layout",
+                "description" : "Change the number of columns and rows in the Launchpad grid layout. Default is 7x5.",
+                "category"    : "Appearance",
+                "infoUrl"     : "https://www.defaults-write.com/change-the-layout-rows-and-columns-of-launchpad/",
+                "author"      : "QuickInstall.App",
+                "impact"      : "Dock",
+                "privileged"  : false,
+                "sipInvolved" : false,
+                "parameters"  : [
+                    "Launchpad grid columns",
+                    "Launchpad grid rows"
+                ],
+                "types"       : [
+                    "number",
+                    "number"
+                ],
+                "values"      : [
+                    "7",
+                    "5"
+                ]
+            }
+        }
+    ]
+}

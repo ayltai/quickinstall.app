@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: QuickInstall.app API
+  version: 1.0.0
+  description: The QuickInstall API
+  license:
+    name: MIT
+    url: https://github.com/ayltai/quickinstall.app/blob/master/LICENSE
+  contact:
+    name: Alan Tai
+    url: https://www.linkedin.com/in/ayltai
+externalDocs:
+  description: Find out more about the API
+  url: https://github.com/ayltai/quickinstall.app
+servers:
+  - url: https://europe-west2-quickinstallapp.cloudfunctions.net/api
+    description: Production server
+  - url: http://localhost:8080
+    description: Development server
+tags:
+  - name: system
+    description: System API
+  - name: recipe
+    description: Recipe API
+  - name: spell
+    description: Spell API
+  - name: install
+    description: Installation script generation API
+  - name: choco
+    description: Chocolatey Search API
+paths:
+  /health:
+    $ref: './paths/health.yaml'
+  /{platform}/recipes:
+    $ref: './paths/recipes.yaml'
+  /{platform}/recipes/{id}/install:
+    $ref: './paths/install_recipe.yaml'
+  /mac/spells:
+    $ref: './paths/spells.yaml'
+  /mac/spells/{id}/install:
+    $ref: './paths/install_spell.yaml'
+  /choco/search:
+    $ref: './paths/choco_search.yaml'

@@ -1,0 +1,42 @@
+mode con: cols=120 lines=50
+@echo off
+
+<% if (ingredients.some(ingredient => ingredient.source === 'Chocolatey')) { %>
+  echo Checking if Chocolatey is installed ...
+  @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+<% } %>
+
+if %errorlevel% NEQ 0 (
+  echo Failed to install Chocolatey
+) else (
+  echo    .d88b.       w      8    888             w        8 8
+  echo    8P  Y8 8   8 w .d8b 8.dP  8  8d8b. d88b w8ww .d88 8 8   .d88 88b. 88b.
+  echo    8b wd8 8b d8 8 8    88b   8  8P Y8 `Yb.  8   8  8 8 8   8  8 8  8 8  8
+  echo    `Y88Pw `Y8P8 8 `Y8P 8 Yb 888 8   8 Y88P  Y8P `Y88 8 8 w `Y88 88P' 88P'
+  echo                                                                 8    8
+
+  set STARTTIME=%TIME%
+
+  <% if (ingredients.some(ingredient => ingredient.source === 'Chocolatey')) { %>
+    echo Installing apps from Chocolatey ...
+    <% ingredients.filter(ingredient => ingredient.source === 'Chocolatey').forEach(ingredient => { %>
+      choco install <%= ingredient.id %> -y
+      if %errorlevel% NEQ 0 (
+      echo Failed to install <%= ingredient.id %> from Chocolatey
+      ) else (
+      echo Successfully installed <%= ingredient.id %> from Chocolatey
+      )
+    <% }) %>
+  <% } %>
+
+  echo "########:"##::: ##:::::::"##::"#######::"##:::"##:"####:
+  echo  ##.....:: ###:: ##::::::: ##:"##.... ##:. ##:"##:: ####:
+  echo  ##::::::: ####: ##::::::: ##: ##:::: ##::. ####::: ####:
+  echo  ######::: ## ## ##::::::: ##: ##:::: ##:::. ##::::: ##::
+  echo  ##...:::: ##. ####:"##::: ##: ##:::: ##:::: ##:::::..:::
+  echo  ##::::::: ##:. ###: ##::: ##: ##:::: ##:::: ##::::"####:
+  echo  ########: ##::. ##:. ######::. #######::::: ##:::: ####:
+  echo ........::..::::..:::......::::.......::::::..:::::....::
+)
+
+@echo on

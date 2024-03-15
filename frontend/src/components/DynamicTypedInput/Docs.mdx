@@ -1,0 +1,28 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './DynamicTypedInput.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use dynamic typed inputs
+
+Dynamic typed inputs are used when the required input data type is only known at runtime so that users can input data using an appropriate input field.
+
+When using dynamic typed inputs,
+* Use a label to explain exactly what data is required
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

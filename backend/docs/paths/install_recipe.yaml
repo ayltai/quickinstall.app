@@ -1,0 +1,35 @@
+get:
+  tags:
+    - install
+    - recipe
+  operationId: getRecipeScriptApi
+  summary: Get an installation script for a recipe
+  description: Get an installation script by recipe ID
+  parameters:
+    - name: platform
+      in: path
+      required: true
+      description: The applicable platform of the recipe
+      schema:
+        type: string
+        enum:
+          - win
+          - mac
+    - name: id
+      in: path
+      required: true
+      description: The ID of the recipe
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string
+            description: The installation script
+    '400':
+      description: Bad Request
+    '404':
+      description: Not Found

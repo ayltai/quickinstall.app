@@ -1,0 +1,28 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './EmptyState.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use empty states
+
+Empty states provides an opportunity to show explanation or guidance to help users progress.
+
+When using empty states,
+* Explain clearly the steps the users need to take to progress
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

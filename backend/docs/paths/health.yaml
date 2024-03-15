@@ -1,0 +1,13 @@
+get:
+  tags:
+    - system
+  operationId: getHealthApi
+  summary: Get system health
+  description: Get system health
+  responses:
+    '200':
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string

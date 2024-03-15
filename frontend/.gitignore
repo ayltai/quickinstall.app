@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+
+# Testing
+.nyc_output/
+coverage/
+playwright-report/
+playwright/.cache/
+test-results/
+
+# Generated
+dist/
+html/
+public/design/
+stats.html
+
+# Secrets
+.env.*

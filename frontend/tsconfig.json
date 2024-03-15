@@ -1,0 +1,24 @@
+{
+    "extends"         : "@tsconfig/create-react-app/tsconfig.json",
+    "compilerOptions" : {
+        "lib"                     : [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "target"                  : "ESNext",
+        "module"                  : "ESNext",
+        "moduleResolution"        : "Node",
+        "useDefineForClassFields" : true,
+        "allowJs"                 : false,
+        "skipLibCheck"            : true,
+        "types"                   : [
+            "vitest/globals"
+        ]
+    },
+    "references"      : [
+        {
+            "path" : "./tsconfig.node.json"
+        }
+    ]
+}

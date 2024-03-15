@@ -1,0 +1,185 @@
+name: CI
+on:
+  push:
+    branches:
+      - '*'
+    tags-ignore:
+      - release/**
+jobs:
+  check-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Google Cloud Platform authentication
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          install_components: cloud-firestore-emulator
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store path
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os}}-pnpm-store-${{ hashFiles('**/backend/package.json') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm i
+        working-directory: backend
+      - name: Linting
+        run: pnpm lint
+        working-directory: backend
+      - name: Testing
+        run: pnpm test
+        working-directory: backend
+        env:
+          FIRESTORE_EMULATOR_HOST: localhost:8081
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage
+          path: backend/coverage
+  check-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store path
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os}}-pnpm-store-${{ hashFiles('**/frontend/package.json') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm i
+        working-directory: frontend
+      - name: Linting
+        run: pnpm lint
+        working-directory: frontend
+      - name: Testing
+        run: pnpm test:unit:ci
+        working-directory: frontend
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+        working-directory: frontend
+      - name: Run Playwright tests
+        run: pnpm test:e2e:coverage
+        working-directory: frontend
+      - name: Upload Playwright reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: frontend/playwright-report
+      - name: Merge coverage reports
+        run: pnpm test:coverage
+        working-directory: frontend
+      - name: Upload test coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-coverage
+          path: frontend/coverage
+  check-infra:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Google Cloud Platform authentication
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+      - name: Set up Terraform CLI
+        uses: hashicorp/setup-terraform@v3
+      - name: Terraform fmt
+        run: terraform fmt -check
+        working-directory: infra
+      - name: Terraform init
+        run: terraform init -lock-timeout=5m
+        working-directory: infra
+        env:
+          TF_IN_AUTOMATION: true
+      - name: Terraform validate
+        run: terraform validate
+        working-directory: infra
+        env:
+          TF_IN_AUTOMATION: true
+      - name: Terraform plan
+        run: terraform plan -input=false -lock-timeout=10m
+        working-directory: infra
+        env:
+          TF_IN_AUTOMATION: true
+  scan-backend:
+    runs-on: ubuntu-latest
+    needs:
+      - check-backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-coverage
+          path: backend/coverage
+      - name: SonarCloud scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: backend
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACKEND }}
+  scan-frontend:
+    runs-on: ubuntu-latest
+    needs:
+      - check-frontend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-coverage
+          path: frontend/coverage
+      - name: SonarCloud scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: frontend
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACKEND }}
+  scan-infra:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: SonarCloud scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: infra
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_INFRA }}

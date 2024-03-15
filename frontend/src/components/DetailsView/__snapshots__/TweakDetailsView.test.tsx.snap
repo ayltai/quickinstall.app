@@ -1,0 +1,476 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<TweakDetailsView /> > renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiStack-root css-1sazv7p-MuiStack-root"
+      >
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+          >
+            common.description
+          </span>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+          >
+            Description
+          </p>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+          >
+            common.website
+          </span>
+          <a
+            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1g8o8w2-MuiTypography-root-MuiLink-root"
+            href="https://example.com"
+            target="_blank"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+            >
+              https://example.com
+            </p>
+          </a>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+          >
+            common.source
+          </span>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+          >
+            Homebrew
+          </p>
+        </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          class="MuiStack-root css-lbjakd-MuiStack-root"
+        >
+          <div
+            class="MuiStack-root css-crjfvx-MuiStack-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+            >
+              Width
+            </p>
+            <div
+              class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                  id=":r0:"
+                  required=""
+                  type="text"
+                  value="100"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-ihdtdm"
+                  >
+                    <span
+                      class="notranslate"
+                    >
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiStack-root css-crjfvx-MuiStack-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+            >
+              Height
+            </p>
+            <div
+              class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                  id=":r1:"
+                  required=""
+                  type="text"
+                  value="200"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-ihdtdm"
+                  >
+                    <span
+                      class="notranslate"
+                    >
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiStack-root css-crjfvx-MuiStack-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+            >
+              Disabled
+            </p>
+            <span
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            >
+              <span
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-1kkmc60-MuiButtonBase-root-MuiSwitch-switchBase"
+              >
+                <input
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  type="checkbox"
+                />
+                <span
+                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                />
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              />
+            </span>
+          </div>
+          <div
+            class="MuiStack-root css-crjfvx-MuiStack-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+            >
+              Colour
+            </p>
+            <div
+              class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                  id=":r2:"
+                  required=""
+                  type="text"
+                  value="red"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-ihdtdm"
+                  >
+                    <span
+                      class="notranslate"
+                    >
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiStack-root css-1sazv7p-MuiStack-root"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+        >
+          common.description
+        </span>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+        >
+          common.website
+        </span>
+        <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1g8o8w2-MuiTypography-root-MuiLink-root"
+          href="https://example.com"
+          target="_blank"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+          >
+            https://example.com
+          </p>
+        </a>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
+        >
+          common.source
+        </span>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
+        >
+          Homebrew
+        </p>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <div
+        class="MuiStack-root css-lbjakd-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-crjfvx-MuiStack-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+          >
+            Width
+          </p>
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r0:"
+                required=""
+                type="text"
+                value="100"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ihdtdm"
+                >
+                  <span
+                    class="notranslate"
+                  >
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiStack-root css-crjfvx-MuiStack-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+          >
+            Height
+          </p>
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r1:"
+                required=""
+                type="text"
+                value="200"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ihdtdm"
+                >
+                  <span
+                    class="notranslate"
+                  >
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiStack-root css-crjfvx-MuiStack-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+          >
+            Disabled
+          </p>
+          <span
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-1kkmc60-MuiButtonBase-root-MuiSwitch-switchBase"
+            >
+              <input
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                type="checkbox"
+              />
+              <span
+                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+            />
+          </span>
+        </div>
+        <div
+          class="MuiStack-root css-crjfvx-MuiStack-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
+          >
+            Colour
+          </p>
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r2:"
+                required=""
+                type="text"
+                value="red"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ihdtdm"
+                >
+                  <span
+                    class="notranslate"
+                  >
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

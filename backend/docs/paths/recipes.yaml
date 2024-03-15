@@ -1,0 +1,34 @@
+post:
+  tags:
+    - recipe
+  operationId: createRecipeApi
+  summary: Create a new recipe
+  description: Create a new recipe
+  parameters:
+    - name: platform
+      in: path
+      required: true
+      description: The applicable platform of the recipe
+      schema:
+        type: string
+        enum:
+          - win
+          - mac
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../schemas/Ingredient.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        text/plain:
+          schema:
+            type: string
+            description: The ID of the created recipe
+    '400':
+      description: Bad Request

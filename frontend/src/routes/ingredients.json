@@ -1,0 +1,96 @@
+{
+    "sys"   : {
+        "type" : "Array"
+    },
+    "total" : 2,
+    "skip"  : 0,
+    "limit" : 100,
+    "items" : [
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "70KakHFICowgNmeSqpXTcT",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T16:56:08.307Z",
+                "updatedAt"   : "2024-02-22T16:56:08.307Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "development",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "ingredient"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "firefox",
+                "name"        : "Mozilla Firefox",
+                "description" : "Firefox is a free web browser backed by Mozilla, a non-profit dedicated to internet health and privacy.",
+                "category"    : "Essentials",
+                "infoUrl"     : "Mozilla Firefox",
+                "author"      : "Mozilla",
+                "source"      : "Homebrew (Cask)"
+            }
+        },
+        {
+            "metadata" : {
+                "tags" : [ ]
+            },
+            "sys"      : {
+                "space"       : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "Space",
+                        "id"       : "rljsuvr9aw29"
+                    }
+                },
+                "id"          : "7ydI5TQctpoqJM8DbdyC8v",
+                "type"        : "Entry",
+                "createdAt"   : "2024-02-22T16:55:02.606Z",
+                "updatedAt"   : "2024-02-22T16:55:02.606Z",
+                "environment" : {
+                    "sys" : {
+                        "id"       : "development",
+                        "type"     : "Link",
+                        "linkType" : "Environment"
+                    }
+                },
+                "revision"    : 1,
+                "contentType" : {
+                    "sys" : {
+                        "type"     : "Link",
+                        "linkType" : "ContentType",
+                        "id"       : "ingredient"
+                    }
+                },
+                "locale"      : "en"
+            },
+            "fields"   : {
+                "id"          : "google-chrome",
+                "name"        : "Google Chrome",
+                "description" : "Chrome is the official web browser from Google, built to be fast, secure and customisable. Download now and make it yours.",
+                "category"    : "Essentials",
+                "infoUrl"     : "https://www.google.com/chrome/",
+                "author"      : "Google",
+                "source"      : "Homebrew (Cask)"
+            }
+        }
+    ]
+}

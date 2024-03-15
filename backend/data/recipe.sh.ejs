@@ -1,0 +1,93 @@
+#!/bin/bash
+set -u
+printf '\e[8;48;120t'
+
+<% if (ingredients.some(ingredient => ingredient.source === 'App Store')) { %>
+  echo "❓ If you have not already signed in to App Store, press Control+C now."
+  echo "👉 Then follow the instructions below:"
+  echo "👉 https://support.apple.com/en-gb/guide/app-store/fir6253293d/mac"
+  echo -n "❓ Otherwise, press any key to continue "
+
+  for _ in { 1.. 10 }; do read -rs -n1 -t2 || printf "."; done
+<% } %>
+
+echo ''
+echo '⏳ Checking if Homebrew is installed ...'
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo 'Installing Homebrew ...'
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"
+  echo '✅ Successfully installed Homebrew'
+else
+  echo '✅ Homebrew is already installed.'
+fi
+
+<% if (ingredients.some(ingredient => ingredient.source === 'App Store')) { %>
+  echo '⏳ Installing prerequisites ...'
+  brew install mas
+  echo '✅ Prerequisites are installed'
+<% } %>
+echo ''
+
+echo '     _____       _      _   _____          _        _ _                    '
+echo '    |  _  |     (_)    | | |_   _|        | |      | | |                   '
+echo '    | | | |_   _ _  ___| | __| | _ __  ___| |_ __ _| | |  __ _ _ __  _ __  '
+echo '    | | | | | | | |/ __| |/ /| || '_ \/ __| __/ _` | | | / _` | '_ \| '_ \ '
+echo '    \ \/' / |_| | | (__|   (_| || | | \__ \ || (_| | | || (_| | |_) | |_) |'
+echo '     \_/\_\\__,_|_|\___|_|\_\___/_| |_|___/\__\__,_|_|_(_)__,_| .__/| .__/ '
+echo '                                                              | |   | |    '
+echo '                                                              |_|   |_|    '
+
+SECONDS=0
+
+<% if (ingredients.some(ingredient => ingredient.source === 'Homebrew')) { %>
+  echo '⏳ Installing Homebrew packages ...'
+  <% ingredients.filter(ingredient => ingredient.source === 'Homebrew').forEach(ingredient => { %>
+    brew install <%= ingredient.id %>
+    if [[ $? != 0 ]]; then
+      echo '❌ Failed to install <%= ingredient.id %> from Homebrew'
+    else
+      echo '✅ Successfully installed <%= ingredient.id %> from Homebrew'
+    fi
+  <% }) %>
+<% } %>
+
+<% if (ingredients.some(ingredient => ingredient.source === 'Homebrew (Cask)')) { %>
+  echo '⏳ Installing Homebrew packages ...'
+  <% ingredients.filter(ingredient => ingredient.source === 'Homebrew (Cask)').forEach(ingredient => { %>
+    brew install --cask <%= ingredient.id %>
+    if [[ $? != 0 ]]; then
+      echo '❌ Failed to install <%= ingredient.id %> from Homebrew'
+    else
+      echo '✅ Successfully installed <%= ingredient.id %> from Homebrew'
+    fi
+  <% }) %>
+<% } %>
+
+<% if (ingredients.some(ingredient => ingredient.source === 'App Store')) { %>
+  echo '⏳ Installing apps from App Store ...'
+  <% ingredients.filter(ingredient => ingredient.source === 'App Store').forEach(ingredient => { %>
+    mas install <%= ingredient.id %>
+    if [[ $? != 0 ]]; then
+      echo '❌ Failed to install <%= ingredient.id %> from App Store'
+    else
+      echo '✅ Successfully installed <%= ingredient.id %> from App Store'
+    fi
+  <% }) %>
+<% } %>
+
+if [[ ${SECONDS} -gt 60 ]]; then
+  echo "🚀 QuickInstall.app took $((${SECONDS} / 60))m $((${SECONDS} % 60))s to finish"
+else
+  echo "🚀 QuickInstall.app took ${SECONDS}s to finish"
+fi
+echo ''
+
+echo "'########:'##::: ##:::::::'##::'#######::'##:::'##:'####:"
+echo " ##.....:: ###:: ##::::::: ##:'##.... ##:. ##:'##:: ####:"
+echo " ##::::::: ####: ##::::::: ##: ##:::: ##::. ####::: ####:"
+echo " ######::: ## ## ##::::::: ##: ##:::: ##:::. ##::::: ##::"
+echo " ##...:::: ##. ####:'##::: ##: ##:::: ##:::: ##:::::..:::"
+echo " ##::::::: ##:. ###: ##::: ##: ##:::: ##:::: ##::::'####:"
+echo " ########: ##::. ##:. ######::. #######::::: ##:::: ####:"
+echo "........::..::::..:::......::::.......::::::..:::::....::"

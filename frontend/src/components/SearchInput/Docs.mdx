@@ -1,0 +1,28 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './SearchInput.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use search
+
+Search lets users find information using keywords. Search can be used as a means of discovering content, or as a filter to help users in finding content.
+
+When using search,
+* Keep the original search query on the page so that user can easily edit it if they can't find what they are looking for
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

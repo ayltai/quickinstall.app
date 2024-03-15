@@ -1,0 +1,34 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './Footer.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use the footer
+
+The footer helps users who reach the bottom of the page without finding what they want.
+
+When using a footer,
+* Always position it at the bottom of the page
+* Provide links to the website's help sections
+* Do not overwhelm users with too many links
+
+# Guidelines
+
+* Standalone links should start with a capital letter, and don't need a full stop.
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

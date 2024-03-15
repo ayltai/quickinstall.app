@@ -1,0 +1,28 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './CopyableInput.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use copyable inputs
+
+Copyable inputs are used to allow users to copy data.
+
+When using a copyable input,
+* Use a label to explain exactly what can be done with it
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Variants of buttons'
+    includePrimary={false} />
