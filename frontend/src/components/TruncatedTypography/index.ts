@@ -1,0 +1,1 @@
+export { TruncatedTypography, } from './TruncatedTypography';

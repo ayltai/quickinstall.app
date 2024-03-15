@@ -1,0 +1,150 @@
+name: CD
+on:
+  release:
+    types:
+      - created
+jobs:
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store path
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os}}-pnpm-store-${{ hashFiles('**/backend/package.json') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm i
+        working-directory: backend
+      - name: Build
+        run: pnpm build
+        working-directory: backend
+        env:
+          NODE_ENV: production
+      - name: Remove unwanted files
+        run: pnpm clean
+        working-directory: backend
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend
+          path: backend
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store path
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os}}-pnpm-store-${{ hashFiles('**/frontend/package.json') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm i
+        working-directory: frontend
+      - name: Build Storybook
+        run: pnpm storybook:build
+        working-directory: frontend
+      - name: Build frontend
+        run: pnpm build
+        working-directory: frontend
+        env:
+          VITE_APP_SENTRY_DSN: ${{ secrets.VITE_APP_SENTRY_DSN }}
+          VITE_APP_CONTENTFUL_API_KEY: ${{ secrets.VITE_APP_CONTENTFUL_API_KEY }}
+          VITE_APP_CONTENTFUL_SPACE_ID: ${{ secrets.VITE_APP_CONTENTFUL_SPACE_ID }}
+          VITE_APP_FIREBASE_API_KEY: ${{ secrets.VITE_APP_FIREBASE_API_KEY }}
+          VITE_APP_FIREBASE_APP_ID: ${{ secrets.VITE_APP_FIREBASE_APP_ID }}
+          VITE_APP_FIREBASE_PROJECT_ID: ${{ secrets.VITE_APP_FIREBASE_PROJECT_ID }}
+          VITE_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_APP_FIREBASE_MEASUREMENT_ID }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+      - name: Retrieve package version information
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+        with:
+          path: frontend
+      - name: Create a new Sentry release
+        run: ./frontend/node_modules/.bin/sentry-cli releases new ${{ steps.package-version.outputs.current-version }}
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend
+          path: frontend/dist
+  deploy-backend:
+    runs-on: ubuntu-latest
+    needs:
+      - build-backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Google Cloud Platform authentication
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+      - name: Terraform init
+        run: terraform init -lock-timeout=5m
+        working-directory: infra
+        env:
+          TF_IN_AUTOMATION: true
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: backend
+          path: backend
+      - name: Set up Terraform CLI
+        uses: hashicorp/setup-terraform@v3
+      - name: Terraform apply
+        run: terraform apply -input=false -lock-timeout=10m -auto-approve
+        working-directory: infra
+        env:
+          TF_IN_AUTOMATION: true
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    needs:
+      - build-frontend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend
+          path: frontend/dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: quickinstall.app

@@ -1,0 +1,42 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The ID of the tweak
+  name:
+    type: string
+    description: The name of the tweak
+  description:
+    type: string
+    description: The description of the tweak
+  imageUrl:
+    type: string
+    description: The image URL of the tweak
+  infoUrl:
+    type: string
+    description: The info URL of the tweak
+  author:
+    type: string
+    description: The author of the tweak
+  parameters:
+    type: array
+    description: The parameters of the tweak
+    items:
+      type: string
+  types:
+    type: array
+    description: The types of the tweak
+    items:
+      type: string
+      enum:
+        - boolean
+        - number
+        - string
+  values:
+    type: array
+    description: The values of the tweak
+    items:
+      type:
+        - boolean
+        - number
+        - string

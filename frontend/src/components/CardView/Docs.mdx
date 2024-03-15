@@ -1,0 +1,30 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './CardView.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use cards
+
+Cards can be used for many different purposes, including product or service tiles. They help users to scan information by visually grouping related content together.
+
+When using cards,
+* Use a descriptive title so that users can easily find and browse item
+* Make sure all the content in the card, like images and action buttons, are contextually related
+* Keep the number of action buttons per card to a minimum
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Variants of buttons'
+    includePrimary={false} />

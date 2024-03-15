@@ -1,0 +1,24 @@
+post:
+  tags:
+    - spell
+  operationId: createSpellApi
+  summary: Create a new spell
+  description: Create a new spell
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../schemas/Tweak.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        text/plain:
+          schema:
+            type: string
+            description: The ID of the created spell
+    '400':
+      description: Bad Request

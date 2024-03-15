@@ -1,0 +1,35 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './Loading.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use loading indicators
+
+Loading indicators are used when retrieving data or performing actions that take a long time. Although they don't show detils about what is going on in the back-end, loading indicators reassure users that their action is being processed.
+
+When using loading indicators,
+* Show only one loading indicator on a page at one time
+* Be consistent by using the same type of loading indicator for the same kind of activity
+* Include a short visible label that clearly explains what is happening to the user
+* Only use if the wait time is expected to be longer than a second
+
+# Guidelines
+
+* Accompany the loading indicator with a short label that explains the state of the process
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

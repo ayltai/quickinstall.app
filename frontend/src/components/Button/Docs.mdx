@@ -1,0 +1,36 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './MaterialButton.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use buttons
+
+Buttons can be used in dialogue boxes, forms, cards or toolbars.
+
+When using buttons,
+* Use a button when users need to trigger an action on a page
+* Use different button variants on the same page to direct user attention
+
+# Guidelines
+* Button labels should make it easy to understand what will happen if the button is clicked
+* Lead with a strong, actionable verb paired with a noun
+* Make sure the button label fits on one line
+* Start with a capital letter and use sentence case, but don't add full stops
+* Avoid using "my" or "your" in button labels
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Variants of buttons'
+    includePrimary={false} />

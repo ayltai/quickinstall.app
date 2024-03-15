@@ -1,0 +1,26 @@
+type: object
+properties:
+  Id:
+    type: string
+    description: The ID of the package
+  Version:
+    type: string
+    description: The version of the package
+  Title:
+    type: string
+    description: The title of the package
+  Summary:
+    type: string
+    description: The summary of the package
+  Description:
+    type: string
+    description: The description of the package
+  Authors:
+    type: array
+    description: The authors of the package
+  IconUrl:
+    type: string
+    description: The icon URL of the package
+  ProjectUrl:
+    type: string
+    description: The project URL of the package

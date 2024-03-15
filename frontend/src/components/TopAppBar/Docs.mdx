@@ -1,0 +1,25 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './TopAppBar.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use a toolbar
+
+A toolbar is a header component that should be presented at the top of a website. It can be customised by adding `children`.
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

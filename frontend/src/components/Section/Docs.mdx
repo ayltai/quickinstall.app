@@ -1,0 +1,29 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './Section.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use sections
+
+A section sits at the top of an experience, and lets users navigate to different parts of a website. It makes the most important parts of an experience easy for users to find.
+
+# Guidelines
+
+* Labels should start with a capital letter and be in sentence case
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

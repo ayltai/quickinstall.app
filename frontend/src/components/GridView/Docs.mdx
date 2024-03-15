@@ -1,0 +1,28 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './GridView.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use grids
+
+Grids are useful because they help create a familiar and easily navigable structure for content.
+
+When using grids,
+* Apply the grid with consideration of content as some pages might benefit from a three-column layout while other pages might work best with a two-column layout
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

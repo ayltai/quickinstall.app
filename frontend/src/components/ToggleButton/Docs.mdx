@@ -1,0 +1,36 @@
+import { Controls, Description, Meta, Title, Primary, Stories, } from '@storybook/blocks';
+
+import * as ComponentStories from './ToggleButton.stories';
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+<Description />
+
+# How to use toggle buttons
+
+Use a toggle button to let users quickly switch the selection of an item.
+
+When using toggle buttons,
+* Once a user selects an item, the results should be displayed immediately
+* Provide a visible label that clearly identifies the purpose of the toggle buttons
+
+# Guidelines
+
+* Be clear about what will happen if the toggle is selected
+* Start your toggle labels with a capital letter
+* Don't use commas or any punctuation at tht end of each label
+* Don't use more than two words per label
+
+# Default usage
+
+<Primary />
+
+# Parameters
+
+<Controls sort='requiredFirst' />
+
+<Stories
+    title='Examples'
+    includePrimary={false} />

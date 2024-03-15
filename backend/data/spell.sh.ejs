@@ -1,0 +1,572 @@
+#!/bin/bash
+set -u
+printf '\e[8;48;120t'
+
+<% if (tweaks.some(tweak => tweak.privileged)) { %>
+  echo '👉 Administrator privileges are required for some of the tweaks to work.'
+  echo '👉 Please enter your password when prompted or Control+C to exit.'
+  echo -n "❓ Press any key to start tweaking "
+
+  for _ in { 1.. 10 }; do read -rs -n1 -t2 || printf "."; done
+<% } %>
+echo ''
+
+echo '     _____       _      _   _____          _        _ _                    '
+echo '    |  _  |     (_)    | | |_   _|        | |      | | |                   '
+echo '    | | | |_   _ _  ___| | __| | _ __  ___| |_ __ _| | |  __ _ _ __  _ __  '
+echo '    | | | | | | | |/ __| |/ /| || '_ \/ __| __/ _` | | | / _` | '_ \| '_ \ '
+echo '    \ \/' / |_| | | (__|   (_| || | | \__ \ || (_| | | || (_| | |_) | |_) |'
+echo '     \_/\_\\__,_|_|\___|_|\_\___/_| |_|___/\__\__,_|_|_(_)__,_| .__/| .__/ '
+echo '                                                              | |   | |    '
+echo '                                                              |_|   |_|    '
+
+SECONDS=0
+
+<% tweaks.filter(tweak => tweak.id === 'launchpad.grid').forEach(tweak => { %>
+  defaults write com.apple.dock springboard-columns -int <%= tweak.values[0] %>
+  defaults write com.apple.dock springboard-columns -int <%= tweak.values[1] %>
+
+  echo '✅ Changed Launchpad grid layout'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'security.disk_image_verification').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.frameworks.diskimages skip-verify YES
+    defaults write com.apple.frameworks.diskimages skip-verify-locked YES
+    defaults write com.apple.frameworks.diskimages skip-verify-remote YES
+
+    echo '✅ Disabled disk image verification'
+  <% } else { %>
+    defaults write com.apple.frameworks.diskimages skip-verify NO
+    defaults write com.apple.frameworks.diskimages skip-verify-locked NO
+    defaults write com.apple.frameworks.diskimages skip-verify-remote NO
+
+    echo '✅ Enabled disk image verification'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'security.gatekeeper').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo spctl --master-disable
+
+    echo '✅ Disabled Gatekeeper'
+  <% } else { %>
+    sudo spctl --master-enable
+
+    echo '✅ Enabled Gatekeeper'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'security.quarantine').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.LaunchServices "LSQuarantine" -bool "false"
+
+    echo '✅ Disabled quarantine'
+  <% } else { %>
+    defaults write com.apple.LaunchServices "LSQuarantine" -bool "true"
+
+    echo '✅ Enabled quarantine'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'bloatware.game_center').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    launchctl unload -w /System/Library/LaunchAgents/com.apple.gamed.plist 2> /dev/null
+
+    echo '✅ Disabled Game Center'
+  <% } else { %>
+    launchctl load -w /System/Library/LaunchAgents/com.apple.gamed.plist 2> /dev/null
+
+    echo '✅ Enabled Game Center'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'keyboard.smart_quotes').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool "false"
+
+    echo '✅ Disabled smart quotes'
+  <% } else { %>
+    defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool "true"
+
+    echo '✅ Enabled smart quotes'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'keyboard.smart_dashes').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool "false"
+
+    echo '✅ Disabled smart dashes'
+  <% } else { %>
+    defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool "true"
+
+    echo '✅ Enables smart dashes'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'keyboard.auto_capitalisation').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool "false"
+
+    echo '✅ Disabled auto capitalisation'
+  <% } else { %>
+    defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool "true"
+
+    echo '✅ Enabled auto capitalisation'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'keyboard.spelling_autocorrect').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool "false"
+
+    echo '✅ Disabled spelling autocorrect'
+  <% } else { %>
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool "true"
+
+    echo '✅ Enabled spelling autocorrect'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'os.sudden_motion_sensor').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo pmset -a sms 0
+
+    echo '✅ Disabled sudden motion sensor'
+  <% } else { %>
+    sudo pmset -a sms 1
+
+    echo '✅ Enabled sudden motion sensor'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'os.hibernation').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo pmset -a hibernatemode 0
+
+    echo '✅ Disabled hibernation'
+  <% } else { %>
+    sudo pmset -a hibernatemode 1
+
+    echo '✅ Enabled hibernation'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.auto_open_photos').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.ImageCapture disableHotPlug -bool "true"
+
+    echo '✅ Disabled Photos from opening automatically'
+  <% } else { %>
+    defaults write com.apple.ImageCapture disableHotPlug -bool "false"
+
+    echo '✅ Enabled Photos from opening automatically'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.default_screenshot_location').forEach(tweak => { %>
+  defaults write com.apple.screencapture location <%= tweak.values[0] %>
+
+  echo '✅ Changed default screenshot file location'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.display_thumbnail_after_screenshot').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.screencapture show-thumbnail -bool "true"
+
+    echo '✅ Enabled showing a thumbnail after taking a screenshot'
+  <% } else { %>
+    defaults write com.apple.screencapture show-thumbnail -bool "false"
+
+    echo '✅ Disabled showing a thumbnail after taking a screenshot'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.screenshots_format').forEach(tweak => { %>
+  defaults write com.apple.screencapture type <%= tweak.values[0] %>
+
+  echo '✅ Changed default screenshot file format'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.screenshot_shadow').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.screencapture disable-shadow -bool "false"
+
+    echo '✅ Disabled screenshot shadows'
+  <% } else { %>
+    defaults write com.apple.screencapture disable-shadow -bool "true"
+
+    echo '✅ Enabled screenshot shadows'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.screenshot_date').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.screencapture include-date -bool "true"
+
+    echo '✅ Do not include a date in screenshot filenames'
+  <% } else { %>
+    defaults write com.apple.screencapture include-date -bool "false"
+
+    echo '✅ Include a date in screenshot filenames'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'media.subpixel_font_rendering').forEach(tweak => { %>
+  defaults write NSGlobalDomain AppleFontSmoothing -int <%= tweak.values[0] %>
+
+  echo '✅ Changed subpixel font rendering mode'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.file_extensions').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool "true"
+
+    echo '✅ Show file extensions in Finder'
+  <% } else { %>
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool "false"
+
+    echo '✅ Hide file extensions in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.show_hidden_files').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder AppleShowAllFiles -bool "true"
+
+    echo '✅ Show hidden files in Finder'
+  <% } else { %>
+    defaults write com.apple.finder AppleShowAllFiles -bool "false"
+
+    echo '✅ Hide hidden files in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.sidebar_icon_size').forEach(tweak => { %>
+  defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int <%= tweak.values[0] %>
+
+  echo '✅ Changed Finder sidebar icon size'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'Finder.show_status_bar').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder ShowStatusBar -bool "true"
+
+    echo '✅ Show status bar in Finder'
+  <% } else { %>
+    defaults write com.apple.finder ShowStatusBar -bool "false"
+
+    echo '✅ Hide status bar in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.show_quit_option').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder QuitMenuItem -bool "true"
+
+    echo '✅ Show Quit menu item in Finder'
+  <% } else { %>
+    defaults write com.apple.finder QuitMenuItem -bool "false"
+
+    echo '✅ Hide Quit menu item in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.keep_folders_on_top').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder _FXSortFoldersFirst -bool "true"
+
+    echo '✅ Keep folders on top in Finder'
+  <% } else { %>
+    defaults write com.apple.finder _FXSortFoldersFirst -bool "false"
+
+    echo '✅ Do not keep folders on top in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.file_extension_warnings').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool "false"
+
+    echo '✅ Disabled warnings when changing file extensions in Finder'
+  <% } else { %>
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool "true"
+
+    echo '✅ Enabled warnings when changing file extensions in Finder'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.view_style').forEach(tweak => { %>
+  defaults write com.apple.finder FXPreferredViewStyle <%= tweak.values[0] %>
+
+  echo '✅ Changed Finder defualt view style'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.spring_loading').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain com.apple.springing.enabled -bool "true"
+
+    echo '✅ Enabled Finder spring loading effect'
+  <% } else { %>
+    defaults write NSGlobalDomain com.apple.springing.enabled -bool "false"
+
+    echo '✅ Disabled Finder spring loading effect'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'finder.spring_loading_delay').forEach(tweak => { %>
+  defaults write NSGlobalDomain com.apple.springing.delay -float <%= tweak.values[0] %>
+
+  echo '✅ Changed Finder spring loading delay'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'file.ds_store').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool "false"
+
+    echo '✅ Disabled .DS_Store creation on network volumes'
+  <% } else { %>
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool "true"
+
+    echo '✅ Enabled .DS_Store creation on network volumes'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'file.empty_trash_warning').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder WarnOnEmptyTrash -bool "false"
+
+    echo '✅ Disabled warnings when emptying trash'
+  <% } else { %>
+    defaults write com.apple.finder WarnOnEmptyTrash -bool "true"
+
+    echo '✅ Enabled warnings when empty trash'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'file.auto_empty_trash').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.finder FXRemoveOldTrashItems -bool "true"
+
+    echo '✅ Enabled automatic emptying of trash after 30 days'
+  <% } else { %>
+    defaults write com.apple.finder FXRemoveOldTrashItems -bool "false"
+
+    echo '✅ Disabled automatic emptying of trash after 30 days'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.dock_position').forEach(tweak => { %>
+  defaults write com.apple.dock orientation <%= tweak.values[0] %>
+
+  echo '✅ Changed Dock position'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.dock_icon_size').forEach(tweak => { %>
+  defaults write com.apple.dock tilesize -int <%= tweak.values[0] %>
+
+  echo '✅ Changed Dock icon size'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.lock_dock_icon_size').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.dock size-immutable -bool "true"
+
+    echo '✅ Enabled Dock icon size locking'
+  <% } else { %>
+    defaults write com.apple.dock size-immutable -bool "false"
+
+    echo '✅ Disabled Dock icon size locking'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.dock_spring_loading').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool "true"
+
+    echo '✅ Enabled Dock spring loading effect'
+  <% } else { %>
+    defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool "false"
+
+    echo '✅ Disabled Dock spring loading effect'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.recent_apps').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.apple.dock show-recents -bool "false"
+
+    echo '✅ Do not show recent apps in Dock'
+  <% } else { %>
+    defaults write com.apple.dock show-recents -bool "true"
+
+    echo '✅ Show recent apps in Dock'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.dock_animation').forEach(tweak => { %>
+  defaults write com.apple.dock mineffect <%= tweak.values[0] %>
+
+  echo '✅ Changed Dock animation effect'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'appearance.dark_mode').forEach(tweak => { %>
+  defaults write AppleInterfaceStyle string <%= tweak.values[0] %>
+
+  echo '✅ Changed theme mode'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.swipe_navigation').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool "false"
+
+    echo '✅ Disabled swipe navigation in Google Chrome'
+  <% } else { %>
+    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool "true"
+
+    echo '✅ Enabled swipe navigation in Google Chrome'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.tunes_media_keys').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+    echo '✅ Disabled iTunes media keys'
+  <% } else { %>
+    launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+    echo '✅ Enabled iTunes media keys'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.mouse_shake').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool "false"
+
+    echo '✅ Disabled mouse shaking effect'
+  <% } else { %>
+    defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool "true"
+
+    echo '✅ Enabled mouse shaking effect'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.display_sleep').forEach(tweak => { %>
+  sudo pmset -a displaysleep <%= tweak.values[0] %>
+
+  echo '✅ Changed display sleep delay'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.computer_sleep').forEach(tweak => { %>
+  <% if (tweak.values[0] === 0) { %>
+    sudo pmset -a sleep 0
+    sudo systemsetup -setcomputersleep Never
+
+    echo '✅ Disabled computer sleep'
+  <% } else { %>
+    sudo pmset -a sleep <%= tweak.values[0] %>
+    sudo systemsetup -setcomputersleep <%= tweak.values[0] %>
+
+    echo '✅ Changed computer sleep delay'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.keep_windows').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool "true"
+
+    echo '✅ Enabled keeping windows'
+  <% } else { %>
+    defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool "false"
+
+    echo '✅ Disabled keeping windows'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.crash_reports').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.spindump.plist
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.tailspind.plist
+
+    echo '✅ Disabled crash reports'
+  <% } else { %>
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.spindump.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.tailspind.plist
+
+    echo '✅ Enabled crash reports'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.software_update_frequency').forEach(tweak => { %>
+  defaults write com.apple.SoftwareUpdate ScheduleFrequency -int <%= tweak.values[0] %>
+
+  echo '✅ Changed software update frequency'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.default_shell').forEach(tweak => { %>
+  chsh -s /bin/<%= tweak.values[0] %>
+
+  echo '✅ Changed default shell'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.computer_name').forEach(tweak => { %>
+  sudo scutil --set HostName <%= tweak.values[0] %>
+
+  echo '✅ Changed computer name'
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'preference.boot_sound').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo nvram StartupMute=%01
+
+    echo '✅ Disabled boot sound'
+  <% } else { %>
+    sudo nvram StartupMute=%00
+
+    echo '✅ Enabled boot sound'
+  <% } %>
+<% }) %>
+
+<% tweaks.filter(tweak => tweak.id === 'performance.memory_compression').forEach(tweak => { %>
+  <% if (tweak.values[0]) { %>
+    sudo nvram boot-args='vm_compressor=2
+
+    echo '✅ Disabled memory compression and swap'
+  <% } else { %>
+    sudo nvram boot-args='vm_compressor=4
+
+    echo '✅ Enabled memory compression and swap'
+  <% } %>
+<% }) %>
+
+<% if (tweaks.some(tweak => tweak.impact === 'Dock')) { %>
+  killall Dock
+<% } %>
+
+<% if (tweaks.some(tweak => tweak.impact === 'Finder')) { %>
+  killall Finder
+<% } %>
+
+<% if (tweaks.some(tweak => tweak.impact === 'SystemUIServer')) { %>
+  killall SystemUIServer
+<% } %>
+
+if [[ ${SECONDS} -gt 60 ]]; then
+echo "🚀 QuickInstall.app took $((${SECONDS} / 60))m $((${SECONDS} % 60))s to finish"
+else
+echo "🚀 QuickInstall.app took ${SECONDS}s to finish"
+fi
+echo ''
+
+echo "'########:'##::: ##:::::::'##::'#######::'##:::'##:'####:"
+echo " ##.....:: ###:: ##::::::: ##:'##.... ##:. ##:'##:: ####:"
+echo " ##::::::: ####: ##::::::: ##: ##:::: ##::. ####::: ####:"
+echo " ######::: ## ## ##::::::: ##: ##:::: ##:::. ##::::: ##::"
+echo " ##...:::: ##. ####:'##::: ##: ##:::: ##:::: ##:::::..:::"
+echo " ##::::::: ##:. ###: ##::: ##: ##:::: ##:::: ##::::'####:"
+echo " ########: ##::. ##:. ######::. #######::::: ##:::: ####:"
+echo "........::..::::..:::......::::.......::::::..:::::....::"

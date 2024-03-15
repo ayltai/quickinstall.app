@@ -1,0 +1,69 @@
+html {
+    scroll-behavior : smooth;
+    scrollbar-width : thin;
+}
+
+a {
+    color : #1976d2;
+}
+
+.wave {
+    background    : rgb(255 255 255 / 25%);
+    border-radius : 1000% 1000% 0 0;
+    position      : absolute;
+    width         : 200%;
+    height        : 12em;
+    animation     : wave 17s -3s linear infinite;
+    transform     : translate3d(0, 0, 0);
+    opacity       : 0.7;
+    bottom        : -2em;
+    left          : 0;
+}
+
+.wave:nth-of-type(2) {
+    bottom    : -3em;
+    animation : wave 11s linear reverse infinite;
+    opacity   : 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom    : -4em;
+    animation : wave 7s -1s reverse infinite;
+    opacity   : 0.9;
+}
+
+@keyframes gradient {
+    0% {
+        background-position : 0 0
+    }
+
+    50% {
+        background-position : 100% 100%;
+    }
+
+    100% {
+        background-position : 0 0;
+    }
+}
+
+@keyframes wave {
+    5% {
+        transform : translateX(0);
+    }
+
+    25% {
+        transform : translateX(-25%);
+    }
+
+    50% {
+        transform : translateX(-50%);
+    }
+
+    75% {
+        transform : translateX(-25%);
+    }
+
+    100% {
+        transform : translateX(0);
+    }
+}

@@ -1,0 +1,19 @@
+get:
+  tags:
+    - choco
+  operationId: searchChoco
+  summary: Search for Chocolatey packages
+  description: Search for Chocolatey packages
+  parameters:
+    - in: query
+      name: q
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Choco.yaml'

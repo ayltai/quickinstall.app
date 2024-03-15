@@ -1,0 +1,396 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<ListView /> > renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="MuiList-root css-1mk9mw3-MuiList-root"
+      >
+        <li
+          class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+        >
+          <div
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+              >
+                Item 1
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+              >
+                Item 1 description
+              </p>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="delete-button"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </li>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <li
+          class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+        >
+          <div
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+              >
+                Item 2
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+              >
+                Item 2 description
+              </p>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="delete-button"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </li>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <li
+          class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+        >
+          <div
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+              >
+                Item 3
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+              >
+                Item 3 description
+              </p>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="delete-button"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="MuiList-root css-1mk9mw3-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+            >
+              Item 1
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+            >
+              Item 1 description
+            </p>
+          </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+            data-testid="delete-button"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteForeverIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </li>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <li
+        class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+            >
+              Item 2
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+            >
+              Item 2 description
+            </p>
+          </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+            data-testid="delete-button"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteForeverIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </li>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <li
+        class="MuiListItem-root MuiListItem-gutters css-5k8ysz-MuiListItem-root"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1hj7l4e-MuiButtonBase-root-MuiListItemButton-root"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1imhxo2-MuiTypography-root"
+            >
+              Item 3
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-4k7f0g-MuiTypography-root"
+            >
+              Item 3 description
+            </p>
+          </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+            data-testid="delete-button"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteForeverIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
