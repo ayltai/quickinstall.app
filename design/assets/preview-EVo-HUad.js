@@ -1,0 +1,1 @@
+(function(){try{var e=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]="4e904064-9514-494a-99a2-43196243c66d",e._sentryDebugIdIdentifier="sentry-dbid-4e904064-9514-494a-99a2-43196243c66d")}catch{}})();var n="theme",r={[n]:""};export{r as globals};

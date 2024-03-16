@@ -1,0 +1,1 @@
+(function(){try{var e=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]="5e099abe-1bdf-41ac-8116-49ba6a774658",e._sentryDebugIdIdentifier="sentry-dbid-5e099abe-1bdf-41ac-8116-49ba6a774658")}catch{}})();var a={viewport:"reset",viewportRotated:!1};export{a as globals};

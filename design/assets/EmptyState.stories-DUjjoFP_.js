@@ -1,0 +1,5 @@
+import{j as a}from"./useTheme-BlgjukAR.js";import{E as d}from"./EmptyState-DfYZ855U.js";import"./iframe-CAFMPHJt.js";import{T as p}from"./Typography-pnPGBOAX.js";(function(){try{var t=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},r=new Error().stack;r&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[r]="61295151-9d54-478c-a171-8b434055705f",t._sentryDebugIdIdentifier="sentry-dbid-61295151-9d54-478c-a171-8b434055705f")}catch{}})();const i={component:d,title:"Components/Data Presentations/Empty State",argTypes:{children:{description:"The content of the component"}}},e={args:{children:a.jsx(p,{children:"No results"})}};var o,n,s;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    children: <Typography>No results</Typography>
+  }
+}`,...(s=(n=e.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const c=["Default"],g=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:c,default:i},Symbol.toStringTag,{value:"Module"}));export{g as C};
